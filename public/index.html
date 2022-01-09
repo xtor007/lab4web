@@ -1,21 +1,10 @@
 <html>
 
 	<head>
-		<script>
-			window.onload = function() {
-				const queryString = window.location.search
-				const urlParams = new URLSearchParams(queryString)
-				const message = urlParams.get('message')
-				if (message) {
-					setTimeout(() => {
-						alert(message)
-					}, 500)
-				}
-			}
-		</script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="styles/main.css">
-		<link rel="stylesheet" href="styles/form.css">
+		<link rel="stylesheet" href="styles/burger.css">
+		<link rel="stylesheet" href="styles/slider.css">
 		<title>Orbital speed</title>
 	</head>
 
@@ -25,27 +14,22 @@
 
 			<aside class="leftAside">
 
-				<h5>Menu:</h5>
-				<ul>
-					<li><a href="index.html">Orbital speed</a></li>
-					<li><a href="parabola.html">Parabola speed</a></li>
-					<li><a href="hyperbola.html">Hyperbola speed</a></li>
-					<li><a href="galaxy.html">Speed to exit the galaxy</a></li>
-					<li><a href="apparatus.html">Speed developing apparatus</a></li>
-				</ul>
-
-				<form method="POST" action="/form" id="form" class="formBody">
-					<h3>Send to email</h3>
-					<div class="formClass">
-						<label for="formName" class="formLabel">Name*:</label>
-						<input id="formName" type="text" name="name" class="formInput _req _name">
-					</div>
-					<div class="formClass">
-						<label for="formEmail" class="formLabel">E-mail*:</label>
-						<input id="formEmail" type="text" name="email" class="formInput _req _email">
-					</div>
-					<button type="submit" class="formButton">Send</button>
-				</form>
+				<div class="burgerMenu">
+					<input type="checkbox" id="check_menu">
+					<label class="backLable" for="check_menu"></label>
+					<label class="standartLable" for="check_menu"><h5>MENU:</h5></label>
+					<div class="burgerLine l1"></div>
+					<div class="burgerLine l2"></div>
+					<div class="burgerLine l3"></div>
+					<div class="burgerLine l4"></div>
+					<nav class="menu_links">
+						<a href="/index.html">Orbital speed</a>
+						<a href="/parabola.html">Parabola speed</a>
+						<a href="/hyperbola.html">Hyperbola speed</a>
+						<a href="/galaxy.html">Speed to exit the galaxy</a>
+						<a href="/apparatus.html">Speed developing apparatus</a>
+					</nav>
+				</div>
 
 			</aside>
 
@@ -68,6 +52,32 @@
 						</div>
 
 						<article class="mainText">
+
+							<div class="slider">
+								<div class=slider_feed>
+
+									<input type="radio" name="r" id="r1" checked>
+									<input type="radio" name="r" id="r2">
+									<input type="radio" name="r" id="r3">
+									<input type="radio" name="r" id="r4">
+
+									<div class="portret n1"><img src="img/Kepler.jpeg" alt="Johannes Kepler"></div>
+									<div class="portret"><img src="img/Newton.jpeg" alt="Isaac Newton"></div>
+									<div class="portret"><img src="img/Einshtein.jpeg" alt="Albert Einstein"></div>
+									<div class="portret"><img src="img/Korolev.jpeg" alt="Sergej Korolev"></div>
+
+								</div>
+
+								<div class=slider_buttons>
+
+									<label for="r1" class="sliderBut"></label>
+									<label for="r2" class="sliderBut"></label>
+									<label for="r3" class="sliderBut"></label>
+									<label for="r4" class="sliderBut"></label>
+
+								</div>
+							</div>
+
 
 							<p>In the inertial reference frame, only one force will act on an object moving in a circular orbit around the Earth - the force of gravity of the Earth. In this case, the movement of the object will be neither uniform nor uniformly accelerated. This happens because the speed and acceleration (the values ​​are not scalar, but vector) in this case do not satisfy the conditions of uniformity / uniform acceleration of motion - that is, motion with a constant (in magnitude and direction) speed / acceleration.</p>
 
