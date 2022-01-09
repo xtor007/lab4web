@@ -21,7 +21,7 @@
   background-color: black;
 }
 
-.burgerMenu label {
+.standartLable {
   display: block;
   position: absolute;
   top: 0;
@@ -32,8 +32,22 @@
   z-index: 2;
 }
 
+.backLable {
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+}
+
 #check_menu {
   display: none;
+}
+
+#check_menu:checked ~ .backLable {
+  pointer-events: auto;
 }
 
 #check_menu:checked ~ .menu_links {
