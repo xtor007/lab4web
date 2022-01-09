@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/xtor007/lab4web/issues"
   },
-  "homepage": "https://github.com/xtor007/lab4web#readme"
+  "homepage": "https://github.com/xtor007/lab4web#readme",
+  "dependencies": {
+    "fastify": "^3.25.3",
+    "fastify-static": "^4.5.0",
+    "path": "^0.12.7"
+  }
 }
